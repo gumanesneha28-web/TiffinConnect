@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TiffinConnect — Home Food, Away From Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div><div id="announcement" class="announcement hidden"></div>
+<nav class="nav glass">
+<a class="brand" href="index.html"><span class="brand-mark">TC</span><span>Tiffin<span class="brand-accent">Connect</span></span></a>
+<div class="nav-links"><a href="#messes">Find a Mess</a><a href="#how">How it works</a><a href="#story">Our story</a></div>
+<div class="nav-actions"><a id="navLogin" href="login.html" class="btn btn-ghost">Login</a><a id="navJoin" href="login.html?mode=signup" class="btn btn-dark">Join now</a></div>
+</nav>
+
+<main>
+<section class="hero">
+<div class="hero-copy"><span class="eyebrow">HOME FOOD • STUDENT LIFE • NO HASSLE</span>
+<h1>Good food.<br><em>Good days.</em></h1>
+<p>Find trusted local messes, choose your plan, see today's menu and stay updated when your tiffin changes.</p>
+<div class="hero-actions"><a href="#messes" class="btn btn-dark btn-lg">Explore messes <span>↗</span></a><button class="btn btn-light btn-lg" onclick="scrollToSection('how')">See how it works</button></div>
+<div class="hero-trust"><div class="avatar-stack"><span>R</span><span>A</span><span>S</span><span>+</span></div><div><strong>1,200+</strong><small>students eating better</small></div></div>
+</div>
+<div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div>
+<div class="floating-card card-rating"><span class="icon-circle">★</span><div><b>4.8</b><small>student rating</small></div></div>
+<div class="floating-card card-plan"><span class="mini-food">🍱</span><div><b>Monthly plan</b><small>from ₹1,799</small></div></div>
+<div class="tiffin-3d"><div class="steam s1"></div><div class="steam s2"></div><div class="steam s3"></div><div class="tiffin-lid"></div><div class="tiffin-body"><span>TC</span></div><div class="tiffin-bottom"></div></div>
+<div class="hero-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Indian home food"></div>
+</div></section>
+
+<section class="ticker"><div>VEG & NON-VEG</div><span>✦</span><div>DAILY • WEEKLY • MONTHLY</div><span>✦</span><div>STUDENT FRIENDLY</div><span>✦</span><div>REAL-TIME UPDATES</div></section>
+
+<section id="messes" class="section"><div class="section-head"><div><span class="eyebrow">DISCOVER YOUR NEXT MEAL</span><h2>Local messes,<br><em>beautifully simple.</em></h2></div><a href="login.html?mode=signup" class="text-link">Create an account ↗</a></div>
+<div class="filter-row"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="veg">Veg</button><button class="filter" data-filter="nonveg">Non-Veg</button><button class="filter" data-filter="both">Both</button><select id="priceFilter" class="select"><option value="all">Any price</option><option value="2000">Under ₹2,000</option><option value="2500">Under ₹2,500</option></select></div>
+<div id="messGrid" class="mess-grid"></div></section>
+
+<section id="how" class="section paper-section"><div class="section-head"><div><span class="eyebrow">HOW IT WORKS</span><h2>Three steps.<br><em>Zero confusion.</em></h2></div></div>
+<div class="steps"><article class="step-card"><span>01</span><div class="step-icon">⌕</div><h3>Find</h3><p>Compare nearby messes by food type, price, rating and plan.</p></article><article class="step-card featured"><span>02</span><div class="step-icon">🍱</div><h3>Choose</h3><p>Pick daily, weekly or monthly. Select veg or non-veg.</p></article><article class="step-card"><span>03</span><div class="step-icon">✓</div><h3>Relax</h3><p>Manage skips and see live tiffin announcements from your mess.</p></article></div></section>
+
+<section class="section showcase"><div class="showcase-image"><img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85" alt="Indian meal"><div class="image-caption glass"><span>Today's idea</span><strong>Dal Tadka + Jeera Rice</strong></div></div>
+<div class="showcase-copy"><span class="eyebrow">MADE FOR STUDENT LIFE</span><h2>Your mess,<br><em>on your terms.</em></h2><p>Skip a meal when you're travelling. Check what's cooking before you leave class. Get an alert if lunch is delayed. TiffinConnect puts the everyday details in one calm place.</p><div class="feature-list"><div><b>01</b><span>Today's menu before meal time</span></div><div><b>02</b><span>Skip lunch or dinner in seconds</span></div><div><b>03</b><span>Mess announcements on the home screen</span></div></div></div></section>
+
+<section id="story" class="section story"><div class="story-card"><span class="eyebrow">OUR LITTLE IDEA</span><h2>Because “<em>what's for dinner?</em>” shouldn't be a daily problem.</h2><p>We imagined TiffinConnect as the friendly bridge between students who miss home food and local mess owners who cook it every day.</p><div class="signature">— built with care, by two people who love good food</div></div></section>
+</main>
+<footer class="footer"><div class="brand"><span class="brand-mark">TC</span><span>Tiffin<span class="brand-accent">Connect</span></span></div><p>Home food, away from home.</p><div><a href="login.html">Login</a> · <a href="login.html?role=owner">Mess owner</a> · <a href="login.html?role=admin">Admin</a></div></footer>
+<script src="app.js"></script><script>renderMesses();showAnnouncement();refreshNav();</script>
+</body></html>
